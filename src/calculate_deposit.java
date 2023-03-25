@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DepositCalculator {
+public class DepositCalculator { // предлагаю переименовать файл
 
     double calculateComplexPercent(double amount, double yearRate, int depositPeriod) {
         double pay = amount * Math.pow((1 + yearRate / 12), 12 * depositPeriod);
@@ -16,7 +16,7 @@ public class DepositCalculator {
         return Math.round(value * scale) / scale;
     }
 
-    void calculateWithInput()
+    void calculateWithInput() // предлагаю перенести на эту строчку открывающую скобку
     {
         int period;
         int action;
@@ -45,4 +45,8 @@ public class DepositCalculator {
     public static void main(String[] args) {
         new DepositCalculator().calculateWithInput();
     }
+    //    предлагаю разделить блок выше на 3 строчки:
+    //    1. Объявление + открывающая
+    //    2. Создание-вызов
+    //    3. Закрывающая
 }
